@@ -1,6 +1,8 @@
 <?php 
     if (isset($_POST['name'])) {
         setcookie('name', $_POST['name']);
+        header('Location: /random.php');
+        exit;
     }
 ?>
 <!DOCTYPE html>
