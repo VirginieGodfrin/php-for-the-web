@@ -9,6 +9,12 @@
         <?php if ($number > 5) { ?>
             <h2>Nice!</h2>
         <?php } ?>
+            
+        <p>
+            <a href="/dog.php?number=<?php echo $number; ?>">
+                Now show me <?php echo $number; ?> dogs!
+            </a>
+        </p>
     </body>
 </html>
 
