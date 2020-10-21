@@ -11,20 +11,13 @@
         'dog.jpg' => 'Dog'
     ];
 ?>
-<?php
-    /*
-    * Derive the picture from the query parameter,
-    * but also provide a sensible default ('puppy.jpg'):
-    */
-    
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>dog</title>
     </head>
     <body>
-        <form action="pictures.php" method="POST">
+        <form action="pictures.php" method="GET">
             <div>
                 <div>
                     <label for="picture">
@@ -36,7 +29,7 @@
                             <option value="<?php
                                 echo htmlspecialchars($filename, ENT_QUOTES);
                             ?>"<?php
-                                if (isset($_POST['picture']) && $_POST['picture'] === $filename) {
+                                if (isset($_GET['picture']) && $_GET['picture'] === $filename) {
                                     $picture = $filename;
                                     ?> selected<?php
                                 }
@@ -53,7 +46,7 @@
                 <input name="number" 
                        id="number"
                        value="<?php 
-                            echo htmlspecialchars ($picture); 
+                            echo htmlspecialchars ($nbpictures); 
                        ?>"
                        onclick="alert('Helloooo\o')"
                 >
