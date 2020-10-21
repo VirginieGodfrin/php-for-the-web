@@ -11,7 +11,7 @@
         <?php } ?>
             
         <p>
-            <a href="/dog.php?number=<?php echo $number; ?>">
+            <a href="/pictures.php?number=<?php echo $number; ?>">
                 Now show me <?php echo $number; ?> dogs!
             </a>
         </p>
