@@ -7,7 +7,9 @@
     <body>
         <h1>Your lucky number is: <?php echo $randomInt ?></h1>
         <?php if ($randomInt > 5) { ?>
-            <h2>Nice!</h2>
+            <h2>Nice <?php 
+                echo htmlspecialchars($_COOKIE['name'] ?? 'anonymous user', ENT_QUOTES)
+            ?> !</h2>
         <?php } ?>
             
         <form action="pictures.php" method="GET">

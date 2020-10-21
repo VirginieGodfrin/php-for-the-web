@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>dog</title>
+        <title>Pictures</title>
     </head>
     <body>
         <form action="pictures.php" method="GET">
