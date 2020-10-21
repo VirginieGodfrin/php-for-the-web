@@ -1,3 +1,9 @@
+<?php
+    $nbdog = isset($_GET['number']) ? (int) $_GET['number'] : 1;
+    if ($nbdog < 1) {
+        $nbdog = 1;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,12 +11,11 @@
     </head>
 <body>
 <?php
-    $nbdog = $_GET['number'];
     for ($i = 1; $i <= $nbdog; $i++) {
 ?>
     Cat 
 <?php echo $i; ?>:
-    <img src="/dog.jpg" alt="dog <?php echo $i; ?>">
+    <img src="/dog.jpg" alt="dog <?php echo $i; ?>" width="10%">
 <?php
     }
 ?>
