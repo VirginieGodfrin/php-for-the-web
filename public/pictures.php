@@ -8,7 +8,7 @@
     
     $pictures = [
         'puppy.jpg' => 'Puppy',
-        'apple.jpg' => 'Apple'
+        'dog.jpg' => 'Dog'
     ];
 ?>
 <?php
@@ -24,7 +24,7 @@
         <title>dog</title>
     </head>
     <body>
-        <form action="action">
+        <form action="pictures.php" method="POST">
             <div>
                 <div>
                     <label for="picture">
@@ -36,7 +36,8 @@
                             <option value="<?php
                                 echo htmlspecialchars($filename, ENT_QUOTES);
                             ?>"<?php
-                                if (isset($_GET['picture']) && $_GET['picture'] === $filename) {
+                                if (isset($_POST['picture']) && $_POST['picture'] === $filename) {
+                                    $picture = $filename;
                                     ?> selected<?php
                                 }
                             ?>>
@@ -47,12 +48,12 @@
                     </select>
                 </div>
                 <label for="number">
-                    Number of dogs to show:
+                    Pictures:
                 </label>
                 <input name="number" 
                        id="number"
                        value="<?php 
-                            htmlspecialchars ($picture); 
+                            echo htmlspecialchars ($picture); 
                        ?>"
                        onclick="alert('Helloooo\o')"
                 >
