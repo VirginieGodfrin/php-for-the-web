@@ -1,3 +1,10 @@
+<?php
+    $language = $_COOKIE['language'] ?? null;
+    if (!in_array($language, ['en', 'du'])) {
+        $language = 'fr';
+    };
+    setcookie('language', $language);
+?>
 <!doctype html>
 <html lang="en">
     <head>
