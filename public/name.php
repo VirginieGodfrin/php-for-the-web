@@ -1,15 +1,8 @@
 <?php
-//    $language = $_COOKIE['language'];
-//    if (!in_array($language, ['english', 'dutch'])) {
-//        $language = 'français';
-//    };
-    
+    session_start();
     if (isset($_POST['name'])) {
-        $name = $_COOKIE['name'];
-        if (strlen($name) > 25) {
-            $name = substr($name, 0, 25);
-        }
-        setcookie('name', $name);
+        
+        $_SESSION['name'] = $_POST['name'];
         header('Location: /random.php');
         exit;
     }
