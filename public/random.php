@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
     session_start();
+    var_dump($_SESSION);
     $randomInt = random_int(1, 20) 
 ?>
 <html lang="en">
