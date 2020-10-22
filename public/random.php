@@ -7,9 +7,6 @@
     $title = 'Random';
     include(__DIR__ . '/../_header.php');
 ?>
-<!-- __DIR__ is a magic constant that’s always defined in any PHP script. Its value is
-the absolute path of the directory that contains this script.-->
-<?php include __DIR__ . '/../_flash_message.php'; ?>
     <h1>Your lucky number is: <?php echo $randomInt ?></h1>
 <?php if ($randomInt > 5) { ?>
     <h2>Nice <?php 
