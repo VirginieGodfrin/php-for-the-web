@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <?php
     session_start();
-    var_dump($_SESSION);
     $randomInt = random_int(1, 20) 
 ?>
 <html lang="en">
@@ -9,6 +8,16 @@
         <title>Your lucky number</title>
     </head>
     <body>
+        <?php
+            if (isset($_SESSION['message'])) {
+        ?>
+            <p><?php
+                    echo htmlspecialchars($_SESSION['message'], ENT_QUOTES);
+            ?></p>
+        <?php
+                unset($_SESSION['message']);
+            }
+        ?>
         <h1>Your lucky number is: <?php echo $randomInt ?></h1>
         <?php if ($randomInt > 5) { ?>
             <h2>Nice <?php 
