@@ -6,6 +6,7 @@
     }
 ?>
 <?php
+    $title = 'Secret';
     include(__DIR__ . '/../_header.php');
 ?>
     <p><a href="/logout.php">Log out</a></p>

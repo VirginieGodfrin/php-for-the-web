@@ -21,6 +21,7 @@
     }
 ?>
 <?php
+    $title = 'Login';
     include(__DIR__ . '/../_header.php');
 ?>
     <form method="post">

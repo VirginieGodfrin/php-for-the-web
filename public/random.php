@@ -4,6 +4,7 @@
     $randomInt = random_int(1, 20) 
 ?>
 <?php
+    $title = 'Random';
     include(__DIR__ . '/../_header.php');
 ?>
 <!-- __DIR__ is a magic constant that’s always defined in any PHP script. Its value is

@@ -12,6 +12,7 @@
     ];
 ?>
 <?php
+    $title = 'Pictures';
     include(__DIR__ . '/../_header.php');
 ?>
 <?php include __DIR__ . '/../_flash_message.php'; ?>

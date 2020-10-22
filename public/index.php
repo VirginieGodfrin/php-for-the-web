@@ -6,12 +6,14 @@
     setcookie('language', $language);
 ?>
 <?php
+    $title = 'Index';
     include(__DIR__ . '/../_header.php');
 ?>
     <h1>Hello world</h1>
     <ul>
-        <li><a href="/random.php">Get your lucky number! </a></li>
+        <li><a href="/random.php"> Get your lucky number! </a></li>
         <li><a href="/pictures.php"> Pictures </a></li>
+        <li><a href="/name.php"> Name </a>
         <li><a href="/login.php"> Login </a></li>
     </ul>
 <?php
