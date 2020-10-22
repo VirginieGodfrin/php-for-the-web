@@ -11,63 +11,60 @@
         'dog.jpg' => 'Dog'
     ];
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Pictures</title>
-    </head>
-    <body>
-        <?php include __DIR__ . '/../_flash_message.php'; ?>
-        <form action="pictures.php" method="GET">
+<?php
+    include(__DIR__ . '/../_header.php');
+?>
+<?php include __DIR__ . '/../_flash_message.php'; ?>
+    <form action="pictures.php" method="GET">
+        <div>
             <div>
-                <div>
-                    <label for="picture">
-                        Select a picture:
-                    </label>
-                    <select name="picture" id="picture">
-                        <?php foreach ($pictures as $filename => $description) {
-                        ?>
-                            <option value="<?php
-                                echo htmlspecialchars($filename, ENT_QUOTES);
-                            ?>"<?php
-                                if (isset($_GET['picture']) && $_GET['picture'] === $filename) {
-                                    $picture = $filename;
-                                    ?> selected<?php
-                                }
-                            ?>>
-                            <?php echo htmlspecialchars($description, ENT_QUOTES); ?>
-                            </option>
-                            <?php
-                        } ?>
-                    </select>
-                </div>
-                <label for="number">
-                    Pictures:
+                <label for="picture">
+                    Select a picture:
                 </label>
-                <input name="number" 
-                       id="number"
-                       value="<?php 
-                            echo htmlspecialchars ($nbpictures); 
-                       ?>"
-                       onclick="alert('Helloooo\o')"
-                >
+                <select name="picture" id="picture">
+                    <?php foreach ($pictures as $filename => $description) {
+                    ?>
+                        <option value="<?php
+                            echo htmlspecialchars($filename, ENT_QUOTES);
+                        ?>"<?php
+                            if (isset($_GET['picture']) && $_GET['picture'] === $filename) {
+                                $picture = $filename;
+                                ?> selected<?php
+                            }
+                        ?>>
+                        <?php echo htmlspecialchars($description, ENT_QUOTES); ?>
+                        </option>
+                        <?php
+                    } ?>
+                </select>
             </div>
-            <div>
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-        <hr>
-    <?php
-        for ($i = 1; $i <= $nbpictures; $i++) {
-    ?>
-    Cat 
-    <?php echo $i; ?>:
-    <img src="img/<?php echo htmlspecialchars($picture, ENT_QUOTES)?>" 
-         alt="dog <?php echo $i; ?>" 
-         width="10%">
-    <?php
-        }
-    ?>
-    </body>
-</html>
+            <label for="number">
+                Pictures:
+            </label>
+            <input name="number" 
+                   id="number"
+                   value="<?php 
+                        echo htmlspecialchars ($nbpictures); 
+                   ?>"
+                   onclick="alert('Helloooo\o')"
+            >
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <hr>
+<?php
+    for ($i = 1; $i <= $nbpictures; $i++) {
+?>
+        Cat 
+        <?php echo $i; ?>:
+        <img src="img/<?php echo htmlspecialchars($picture, ENT_QUOTES)?>" 
+             alt="dog <?php echo $i; ?>" 
+             width="10%">
+<?php
+    }
+?>
+<?php
+    include(__DIR__ . '/../_footer.php');
 

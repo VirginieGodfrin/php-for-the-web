@@ -20,32 +20,26 @@
         }
     }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    <title>Login</title>
-    </head>
-    <body>
-        <?php
-            var_dump($_POST);
-        ?>
-        <form method="post">
-            <div>
-                <label for="username">
-                    Username:
-                </label>
-                <input type="text" name="username" id="username">
-            </div>
-            <div>
-                <label for="password">
-                    Password:
-                </label>
-                <input type="password" name="password" id="password">
-            </div>
-            <div>
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-    </body>
-</html>    
+<?php
+    include(__DIR__ . '/../_header.php');
+?>
+    <form method="post">
+        <div>
+            <label for="username">
+                Username:
+            </label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div>
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+<?php
+    include(__DIR__ . '/../_footer.php');
 
