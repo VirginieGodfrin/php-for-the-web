@@ -17,6 +17,7 @@
         <title>Pictures</title>
     </head>
     <body>
+        <?php include __DIR__ . '/../_flash_message.php'; ?>
         <form action="pictures.php" method="GET">
             <div>
                 <div>
