@@ -1,12 +1,12 @@
 <?php
     include(__DIR__ . '/../bootstrap.php');
+
     if (!isset($_SESSION['authenticated_user'])) {
         header('Location: /login.php');
         exit;
     }
-    $_SESSION['authenticated_user'] = $_POST['username'];
-    $_SESSION['message'] = 'Welkom '. $_POST['username'] ;
-?>
+    $_SESSION['message'] = 'Welkom '. $_SESSION['authenticated_user'];
+    ?>
 <?php
     $title = 'Secret';
     include(__DIR__ . '/../_header.php');

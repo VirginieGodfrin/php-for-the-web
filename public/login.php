@@ -1,10 +1,11 @@
 <?php
-    session_start();
+    include(__DIR__ . '/../bootstrap.php');
     $users = [
-        'virginie' => '$2y$10$eGmrNTzUfKDqUtHOp.Yp7elyt4qiiim.m1PD6MDbADANLmb1Mt9Ui',
+        'virginie' => '$2y$10$O7Kl5f4yLnjhLlnR7zk//.DgiOcXY3m9MKcCQ408j.r/VDVk6sN0S',
     ];
-    
+        
     if (isset($_POST['username'], $_POST['password'])) {
+        
         // The user has submitted the login form
         if (isset($users[$_POST['username']])) {
             // The provided username is correct, now validate the password
