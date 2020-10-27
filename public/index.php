@@ -1,11 +1,12 @@
 <?php
+    include(__DIR__ . '/../bootstrap.php');
+    
     $language = $_COOKIE['language'] ?? null;
     if (!in_array($language, ['en', 'du'])) {
         $language = 'fr';
     };
     setcookie('language', $language);
-?>
-<?php
+    
     $title = 'Index';
     include(__DIR__ . '/../_header.php');
 ?>
