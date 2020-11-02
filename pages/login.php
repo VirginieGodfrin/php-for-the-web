@@ -15,7 +15,7 @@
                 // Remember the username of the user who just logged in
                 $_SESSION['authenticated_user'] = $_POST['username'];
                 // Redirect to /secret.php
-                header('Location: /secret.php');
+                header('Location: /secret');
                 exit;
             }
         }

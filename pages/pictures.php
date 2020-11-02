@@ -14,7 +14,7 @@
     $title = 'Pictures';
     include(__DIR__ . '/../_header.php');
 ?>
-    <form action="pictures.php" method="GET">
+    <form action="/pictures" method="GET">
         <div>
             <div>
                 <label for="picture">

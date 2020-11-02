@@ -12,7 +12,7 @@
         echo htmlspecialchars($_SESSION['name'] ?? 'anonymous user', ENT_QUOTES)
     ?> !</h2>
 <?php } ?>
-    <form action="pictures.php" method="GET">
+    <form action="/pictures" method="GET">
         <input type="hidden" name="number" value="<?php
             echo $randomInt;
         ?>">

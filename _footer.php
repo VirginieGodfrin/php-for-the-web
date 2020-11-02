@@ -6,11 +6,11 @@
                     <li class="nav-item">You are logged in as: 
                         <?php echo $_SESSION['authenticated_user']; ?>
                     </li>
-                    <li class="nav-item"><a href="/logout.php">Log out</a></li>
+                    <li class="nav-item"><a href="/logout">Log out</a></li>
             <?php
                 } else {
             ?>
-                    <li class="nav-item"><a href="/login.php">Log in</a></li>
+                    <li class="nav-item"><a href="/login">Log in</a></li>
             <?php
                 }
             ?>

@@ -2,7 +2,7 @@
     include(__DIR__ . '/../bootstrap.php');
 
     if (!isset($_SESSION['authenticated_user'])) {
-        header('Location: /login.php');
+        header('Location: /login');
         exit;
     }
     $_SESSION['message'] = 'Welkom '. $_SESSION['authenticated_user'];

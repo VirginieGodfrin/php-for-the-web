@@ -7,14 +7,23 @@
     };
     setcookie('language', $language);
     
-    $title = 'Index';
-    include(__DIR__ . '/../_header.php');
-?>
-    <h1>Hello world</h1>
-    <ul>
-        <li><a href="/random.php"> Get your lucky number! </a></li>
-        <li><a href="/pictures.php"> Pictures </a></li>
-        <li><a href="/name.php"> Name </a>
-    </ul>
-<?php
-    include(__DIR__ . '/../_footer.php');
+    $urlMap = [
+        '/login' => 'login.php',
+        '/logout' => 'logout.php',
+        '/name' => 'name.php',
+        '/pictures' => 'pictures.php',
+        '/random' => 'random.php',
+        '/secret' => 'secret.php',
+        '/' => 'homepage.php'
+    ];
+    
+    $pathInfo = $_SERVER['PATH_INFO'] ?? '/';
+    
+    if( isset( $urlMap[ $pathInfo ] ) ) {
+        // Load a specific page script
+        include( __DIR__ . '/../pages/' . $urlMap[ $pathInfo ] );
+    }else{
+        // Return a 404 status code
+        header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
+        include(__DIR__ . '/../pages/404.php');
+    }

@@ -11,10 +11,10 @@
         <nav class="navbar navbar-expand-lg bg-light">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="/">Homepage</a></li>
-                <li class="nav-item"><a class="nav-link" href="/random.php"> Get your lucky number! </a></li>
-                <li class="nav-item"><a class="nav-link" href="/pictures.php"> Pictures </a></li>
-                <li class="nav-item"><a class="nav-link" href="/name.php"> Name </a>
-                <li class="nav-item"><a class="nav-link" href="/secret.php">Secret picture</a></li>
+                <li class="nav-item"><a class="nav-link" href="/random"> Get your lucky number! </a></li>
+                <li class="nav-item"><a class="nav-link" href="/pictures"> Pictures </a></li>
+                <li class="nav-item"><a class="nav-link" href="/name"> Name </a>
+                <li class="nav-item"><a class="nav-link" href="/secret">Secret picture</a></li>
             </ul>
         </nav>
 <?php
