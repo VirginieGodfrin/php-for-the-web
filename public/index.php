@@ -8,13 +8,14 @@
     setcookie('language', $language);
     
     $urlMap = [
+        '/' => 'homepage.php',
+        '/create-tour' => 'create-tour.php',
         '/login' => 'login.php',
         '/logout' => 'logout.php',
         '/name' => 'name.php',
         '/pictures' => 'pictures.php',
         '/random' => 'random.php',
         '/secret' => 'secret.php',
-        '/' => 'homepage.php'
     ];
     
     $pathInfo = $_SERVER['PATH_INFO'] ?? '/';
