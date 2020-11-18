@@ -44,6 +44,7 @@
 
     include(__DIR__ . '/../_header.php');
 ?>
+<p><a href="/list-tours">Go back to the list</a></p>
 <h1>Create a new tour</h1>
     <form method="post">
         <div>

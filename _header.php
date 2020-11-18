@@ -15,7 +15,6 @@
                 <li class="nav-item"><a class="nav-link" href="/pictures"> Pictures </a></li>
                 <li class="nav-item"><a class="nav-link" href="/name"> Name </a>
                 <li class="nav-item"><a class="nav-link" href="/secret">Secret picture</a></li>
-                <li class="nav-item"><a class="nav-link" href="/create-tour">Create Tour</a></li>
                 <li class="nav-item"><a class="nav-link" href="/list-tours">List tours</a></li>
             </ul>
         </nav>
