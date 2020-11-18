@@ -3,40 +3,5 @@
         "destination": "Berlin",
         "number_of_tickets_available": 10,
         "is_accessible": true
-    },
-    {
-        "destination": "Paris",
-        "number_of_tickets_available": 5,
-        "is_accessible": false
-    },
-    {
-        "destination": "Berlin",
-        "number_of_tickets_available": 10,
-        "is_accessible": true
-    },
-    {
-        "destination": "Berlin",
-        "number_of_tickets_available": 10,
-        "is_accessible": true
-    },
-    {
-        "destination": "Berlin",
-        "number_of_tickets_available": 10,
-        "is_accessible": true
-    },
-    {
-        "destination": "mars",
-        "number_of_tickets_available": null,
-        "is_accessible": "yes"
-    },
-    {
-        "destination": "lune",
-        "number_of_tickets_available": null,
-        "is_accessible": null
-    },
-    {
-        "destination": "",
-        "number_of_tickets_available": 0,
-        "is_accessible": false
     }
 ]
