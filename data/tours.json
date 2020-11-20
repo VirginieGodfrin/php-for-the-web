@@ -1,0 +1,14 @@
+[
+    {
+        "destination": "Paris",
+        "number_of_tickets_available": 3,
+        "is_accessible": true,
+        "id": 1
+    },
+    {
+        "destination": "Berlin",
+        "number_of_tickets_available": 5,
+        "is_accessible": false,
+        "id": 2
+    }
+]

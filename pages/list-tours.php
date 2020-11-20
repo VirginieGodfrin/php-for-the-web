@@ -1,13 +1,9 @@
 <?php
+    include(__DIR__ . '/functions/tour-crud.php');
+    
     include(__DIR__ . '/../bootstrap.php');
-
-    $toursJsonFile = __DIR__ . '/../data/tours.json';
-    if (file_exists($toursJsonFile)) {
-        $jsonData = file_get_contents($toursJsonFile);
-        $toursData = json_decode($jsonData, true);
-    } else {
-        $toursData = [];
-    }
+    
+    $toursData = load_all_tours_data();
 
     include(__DIR__ . '/../_header.php');
 ?>
@@ -27,6 +23,7 @@
                     <th>Destination</th>
                     <th>Number of tickets</th>
                     <th>Is accessible</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +39,12 @@
                     </td>
                     <td>
                         <?php echo $tourData['is_accessible'] ? 'Yes' : 'No'; ?>
+                    </td>
+                    <td>
+                    <a href="/edit-tour?id=<?php echo htmlspecialchars($tourData['id'], ENT_QUOTES);?>" 
+                       class="btn btn-primary">
+                        Edit
+                    </a>
                     </td>
                 </tr>
                 <?php
