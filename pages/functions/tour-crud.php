@@ -42,3 +42,27 @@ function save_all_tours(array $toursData): void
     file_put_contents($toursJsonFile, $jsonData);
 }
 
+// this function can load the data of a single tour which we can use as the normalized data to feed into the form.
+function load_tour_data(int $id): array
+{
+    $toursData = load_all_tours_data();
+    foreach ($toursData as $tourData) {
+        if ($tourData['id'] === $id) {
+            return $tourData;
+        }
+    }
+    throw new RuntimeException('Could not find tour with ID ' . $id);
+}
+
+// this function is used to save the modified tour data
+function save_tour_data(array $modifiedTourData): void
+{
+    $toursData = load_all_tours_data();
+    foreach ($toursData as $key => $tourData) {
+        if ($tourData['id'] === $modifiedTourData['id']) {
+            $toursData[$key] = $modifiedTourData;
+        }
+    }
+    save_all_tours($toursData);
+}
+

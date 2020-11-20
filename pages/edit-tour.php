@@ -8,6 +8,7 @@
     }
     
     $tourId = (int)$_GET['id'];
+    $normalizedData = load_tour_data($tourId);
     $formErrors = [];
     
     /*
@@ -20,6 +21,8 @@
         
         if (count($formErrors) === 0) {
             // TODO save the modified tour data
+            $normalizedData['id'] = $tourId;
+            save_tour_data($normalizedData);
             $_SESSION['message'] = 'The tour was updated successfully';
             header('Location: /list-tours');
             exit;
