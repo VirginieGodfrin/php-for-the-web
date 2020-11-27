@@ -66,3 +66,14 @@ function save_tour_data(array $modifiedTourData): void
     save_all_tours($toursData);
 }
 
+// this function doesn't delete data in tours.json but marks it as deleted
+function delete_tour(int $id): void
+{
+    $toursData = load_all_tours_data();
+    foreach ($toursData as $key => $tourData) {
+        if ($tourData['id'] === $id) {
+            $toursData[$key]['is_deleted'] = true;
+        }
+    }
+    save_all_tours($toursData);
+}

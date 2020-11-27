@@ -3,12 +3,20 @@
         "destination": "Paris",
         "number_of_tickets_available": 3,
         "is_accessible": true,
-        "id": 1
+        "id": 1,
+        "is_deleted": true
     },
     {
         "destination": "Berlin",
         "number_of_tickets_available": 5,
         "is_accessible": false,
-        "id": 2
+        "id": 2,
+        "is_deleted": true
+    },
+    {
+        "destination": "Londre",
+        "number_of_tickets_available": 77,
+        "is_accessible": true,
+        "id": 3
     }
 ]

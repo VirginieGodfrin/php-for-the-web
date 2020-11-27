@@ -11,6 +11,7 @@
         '/' => 'homepage.php',
         '/create-tour' => 'create-tour.php',
         '/edit-tour' => 'edit-tour.php',
+        '/delete-tour' => 'delete-tour.php',
         '/list-tours' => 'list-tours.php',
         '/login' => 'login.php',
         '/logout' => 'logout.php',

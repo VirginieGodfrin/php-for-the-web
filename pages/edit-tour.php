@@ -8,7 +8,8 @@
     }
     
     $tourId = (int)$_GET['id'];
-    $normalizedData = load_tour_data($tourId);
+    $originalData = load_tour_data($tourId);
+    $normalizedData = $originalData;
     $formErrors = [];
     
     /*
@@ -16,7 +17,10 @@
     * so it shows up in the form
     */
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $normalizedData = normalize_submitted_data($_POST);
+        $normalizedData = array_merge(
+            $originalData,
+            normalize_submitted_data($_POST)
+        );
         $formErrors = validate_normalized_data($normalizedData);
         
         if (count($formErrors) === 0) {
