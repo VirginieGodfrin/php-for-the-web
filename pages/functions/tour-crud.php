@@ -1,13 +1,21 @@
 <?php
 
 // this function accepts an array of submitted data and returns an array of normalized data
-function normalize_submitted_data(array $submittedData): array
-{
-    return [
+function normalize_submitted_data(
+        array $submittedData,
+        array $files
+): array {
+    $normalizedData = [
         'destination' => isset($submittedData['destination']) ? (string)$submittedData['destination'] : '',
         'number_of_tickets_available' => isset($submittedData['number_of_tickets_available']) ? (int)$submittedData['number_of_tickets_available'] : 0,
         'is_accessible' => isset($submittedData['is_accessible']) ? true : false
     ];
+    
+    if ( isset($files['picture']['error']) && $files['picture']['error'] === UPLOAD_ERR_OK ) {
+        $normalizedData['picture'] = $files['picture']['tmp_name'];
+    }
+    
+    return $normalizedData;
 }
 
 // this function accepts the normalized data and returns an array of form errors.

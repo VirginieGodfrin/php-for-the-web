@@ -19,7 +19,7 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $normalizedData = array_merge(
             $originalData,
-            normalize_submitted_data($_POST)
+            normalize_submitted_data($_POST, $_FILES)
         );
         $formErrors = validate_normalized_data($normalizedData);
         

@@ -1,6 +1,6 @@
 <?php ?>
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <div>
         <label for="destination">
             Destination:
@@ -49,6 +49,12 @@
             ?>>
             Is accessible
         </label>
+    </div>
+    <div>
+        <label for="picture">
+            Picture:
+        </label>
+        <input type="file" id="picture" name="picture">
     </div>
     <div>
         <button type="submit">Save</button>
