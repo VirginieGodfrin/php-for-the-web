@@ -45,6 +45,7 @@
                 ?>
                 <tr>
                     <td>
+                        <a href="/tour?id=<?php echo htmlspecialchars($tourData['id'],ENT_QUOTES); ?>">
                         <?php echo htmlspecialchars($tourData['destination'], ENT_QUOTES); ?>
                     </td>
                     <td>
