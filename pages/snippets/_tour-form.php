@@ -54,6 +54,17 @@
         <label for="picture">
             Picture:
         </label>
+        <?php
+            if (isset($normalizedData['picture'])) {
+        ?>
+            <a href="/uploads/<?php
+                echo htmlspecialchars(
+                $normalizedData['picture'], ENT_QUOTES
+                );
+            ?>">Current picture</a>
+        <?php
+            }
+        ?>
         <input type="file" id="picture" name="picture">
     </div>
     <div>

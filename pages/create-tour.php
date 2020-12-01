@@ -16,8 +16,6 @@
     
     $formErrors = [];
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//        var_dump($_FILES);
-//        exit;
         // Step 1: normalize the request data:
         $normalizedData = normalize_submitted_data($_POST, $_FILES);
         // Step 2: validate the normalized data
@@ -29,14 +27,7 @@
             // Provide a unique ID for this new tour:
             $normalizedData['id'] = count($toursData) + 1;
             // upload file
-            if (is_uploaded_file($normalizedData['picture'])) {
-                $filename = 'tour-' . $normalizedData['id'] . '.jpg';
-                $picturePath = __DIR__ . '/../public/uploads/' . $filename;
-                // Move the uploaded file to `public/uploads/`:
-                move_uploaded_file($_FILES['picture']['tmp_name'], $picturePath);
-                // Set the filename so it will be saved too:
-                $normalizedData['picture'] = $filename;
-            }
+            $normalizedData = process_image_upload($normalizedData['picture']);
             
             $toursData[] = $normalizedData;
             

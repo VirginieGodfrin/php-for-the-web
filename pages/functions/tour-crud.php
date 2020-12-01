@@ -2,8 +2,8 @@
 
 // this function accepts an array of submitted data and returns an array of normalized data
 function normalize_submitted_data(
-        array $submittedData,
-        array $files
+    array $submittedData,
+    array $files
 ): array {
     $normalizedData = [
         'destination' => isset($submittedData['destination']) ? (string)$submittedData['destination'] : '',
@@ -84,4 +84,20 @@ function delete_tour(int $id): void
         }
     }
     save_all_tours($toursData);
+}
+
+function process_image_upload(array $normalizedData): array
+{
+    if (is_uploaded_file($normalizedData['picture'])) {
+        $filename = 'tour-' . $normalizedData['id'] . '.jpg';
+        $picturePath = __DIR__ . '/../../public/uploads/' . $filename;
+        // Move the uploaded file to `public/uploads/`:
+        move_uploaded_file(
+            $_FILES['picture']['tmp_name'],
+            $picturePath
+        );
+        // Set the filename so it will be saved too:
+        $normalizedData['picture'] = $filename;
+    }
+    return $normalizedData;
 }

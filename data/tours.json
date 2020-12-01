@@ -32,8 +32,8 @@
         "id": 5
     },
     {
-        "destination": "Namur",
-        "number_of_tickets_available": 9,
+        "destination": "Maastricht",
+        "number_of_tickets_available": 3,
         "is_accessible": true,
         "picture": "tour-6.jpg",
         "id": 6
