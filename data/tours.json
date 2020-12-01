@@ -37,5 +37,12 @@
         "is_accessible": true,
         "picture": "tour-6.jpg",
         "id": 6
+    },
+    {
+        "destination": "Sydney",
+        "number_of_tickets_available": 55,
+        "is_accessible": true,
+        "picture": "tour-7.jpg",
+        "id": 7
     }
 ]

@@ -28,6 +28,15 @@ function validate_normalized_data(array $normalizedData): array
     if ($normalizedData['number_of_tickets_available'] < 1) {
         $formErrors['number_of_tickets_available'] = 'Number of tickets available should be at least 1';
     }
+    if (!isset($normalizedData['picture'])) {
+        $formErrors['picture'] = 'Please upload a picture';
+    }elseif (is_uploaded_file($normalizedData['picture'])) {
+        $finfo = new finfo(FILEINFO_MIME_TYPE);
+        $mimeType = $finfo->file($normalizedData['picture']);
+        if ($mimeType !== 'image/jpeg') {
+            $formErrors['picture'] = 'Please provide a JPG image';
+        }
+    }
     return $formErrors;
 }
 

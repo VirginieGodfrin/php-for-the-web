@@ -26,9 +26,7 @@
             $toursData = load_all_tours_data();
             // Provide a unique ID for this new tour:
             $normalizedData['id'] = count($toursData) + 1;
-            // upload file
-            $normalizedData = process_image_upload($normalizedData['picture']);
-            
+
             $toursData[] = $normalizedData;
             
             save_all_tours($toursData);

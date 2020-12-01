@@ -66,6 +66,15 @@
             }
         ?>
         <input type="file" id="picture" name="picture">
+        <?php
+            if (isset($formErrors['picture'])) {
+        ?>
+                <strong>
+                    <?php echo $formErrors['picture']; ?>
+                </strong>
+        <?php
+            }
+        ?>
     </div>
     <div>
         <button type="submit">Save</button>
