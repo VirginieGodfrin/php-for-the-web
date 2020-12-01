@@ -14,6 +14,17 @@
     <h1>Tour to 
         <?php echo htmlspecialchars($tourData['destination'], ENT_QUOTES);?>
     </h1>
+<?php
+    if (isset($tourData['picture'])) {
+?>
+    <p>
+        <img src="/uploads/<?php
+            echo htmlspecialchars($tourData['picture'], ENT_QUOTES);
+        ?>" alt="Illustration">
+    </p>
+<?php
+    }
+?>
     <p>This tour is 
         <?php echo $tourData['is_accessible'] ? 'accessible' : 'not accessible'; ?>.
     </p>
