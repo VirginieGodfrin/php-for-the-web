@@ -20,6 +20,7 @@
         '/pictures' => 'pictures.php',
         '/random' => 'random.php',
         '/secret' => 'secret.php',
+        '/oops' => 'oops.php',
     ];
     
     $pathInfo = $_SERVER['PATH_INFO'] ?? '/';

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <?php
-    include(__DIR__ . '/../bootstrap.php');
     $randomInt = random_int(1, 20);
-            
     $title = 'Random';
     include(__DIR__ . '/../_header.php');
 ?>

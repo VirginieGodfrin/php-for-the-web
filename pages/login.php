@@ -1,5 +1,4 @@
 <?php
-    include(__DIR__ . '/../bootstrap.php');
     $users = [
         'virginie' => '$2y$10$O7Kl5f4yLnjhLlnR7zk//.DgiOcXY3m9MKcCQ408j.r/VDVk6sN0S',
     ];

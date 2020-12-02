@@ -1,5 +1,4 @@
 <?php
-    include(__DIR__ . '/../bootstrap.php');
     $title = 'Homepage';
     include(__DIR__ . '/../_header.php');
 ?>

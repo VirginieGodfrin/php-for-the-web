@@ -1,6 +1,5 @@
 <?php
     include(__DIR__ . '/functions/tour-crud.php');
-    include(__DIR__ . '/../bootstrap.php');
     
     if (!isset($_GET['id'])) {
         header('Location: /list-tours');

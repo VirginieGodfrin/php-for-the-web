@@ -1,8 +1,6 @@
 <?php
     include(__DIR__ . '/functions/tour-crud.php');
-    
-    include(__DIR__ . '/../bootstrap.php');
-    
+
     $toursData = array_filter(
         load_all_tours_data(),
         function (array $tourData) {
