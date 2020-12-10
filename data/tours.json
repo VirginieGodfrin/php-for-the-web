@@ -1,48 +1,9 @@
 [
     {
         "destination": "Paris",
-        "number_of_tickets_available": 3,
-        "is_accessible": true,
-        "id": 1,
-        "is_deleted": true
-    },
-    {
-        "destination": "Berlin",
         "number_of_tickets_available": 5,
         "is_accessible": false,
-        "id": 2,
-        "is_deleted": true
-    },
-    {
-        "destination": "Londre",
-        "number_of_tickets_available": 77,
-        "is_accessible": true,
-        "id": 3
-    },
-    {
-        "destination": "Paris",
-        "number_of_tickets_available": 88,
-        "is_accessible": true,
-        "id": 4
-    },
-    {
-        "destination": "Berlin",
-        "number_of_tickets_available": 5,
-        "is_accessible": true,
-        "id": 5
-    },
-    {
-        "destination": "Maastricht",
-        "number_of_tickets_available": 3,
-        "is_accessible": true,
-        "picture": "tour-6.jpg",
-        "id": 6
-    },
-    {
-        "destination": "Sydney",
-        "number_of_tickets_available": 55,
-        "is_accessible": true,
-        "picture": "tour-7.jpg",
-        "id": 7
+        "picture": "tour-1.jpg",
+        "id": 1
     }
 ]

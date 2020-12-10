@@ -59,7 +59,7 @@
         ?>
             <a href="/uploads/<?php
                 echo htmlspecialchars(
-                $normalizedData['picture'], ENT_QUOTES
+                    $normalizedData['picture'], ENT_QUOTES
                 );
             ?>">Current picture</a>
         <?php

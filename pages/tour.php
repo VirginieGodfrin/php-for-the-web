@@ -23,7 +23,7 @@
 <?php
     }
 ?>
-    <p>This tour is 
+    <p class="accessibility-info">This tour is 
         <?php echo $tourData['is_accessible'] ? 'accessible' : 'not accessible'; ?>.
     </p>
     <p>There are 
