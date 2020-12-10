@@ -2,7 +2,7 @@
     $title = 'Homepage';
     include(__DIR__ . '/../_header.php');
 ?>
-    <h1>Hello world</h1>
+    <h1>Hello world !</h1>
 
     <ul>
         <li><a href="/random"> Get your lucky number! </a></li>
