@@ -29,6 +29,6 @@
     <p>There are 
         <?php echo htmlspecialchars( $tourData['number_of_tickets_available'], ENT_QUOTES); ?> 
         tickets available.
-    </p>
+    </p>    
 <?php
 include(__DIR__ . '/../_footer.php');
